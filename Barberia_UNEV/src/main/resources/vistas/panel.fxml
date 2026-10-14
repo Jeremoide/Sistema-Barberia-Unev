@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.unev.barberia.controlador.PanelController" spacing="16" prefWidth="1040" prefHeight="740" styleClass="pagina">
+ <padding><Insets top="26" right="30" bottom="26" left="30"/></padding>
+ <HBox alignment="CENTER_LEFT" spacing="30"><Label text="Agenda de barbería" styleClass="titulo"/><Button text="Cerrar sesión" onAction="#cerrarSesion"/></HBox>
+ <Label fx:id="bienvenida"/><Label text="Nueva cita" styleClass="marca"/>
+ <GridPane hgap="16" vgap="10"><columnConstraints><ColumnConstraints percentWidth="33"/><ColumnConstraints percentWidth="33"/><ColumnConstraints percentWidth="34"/></columnConstraints>
+ <Label text="Cliente"/><Label text="Barbero" GridPane.columnIndex="1"/><Label text="Servicio" GridPane.columnIndex="2"/>
+ <ComboBox fx:id="cliente" promptText="Seleccione" maxWidth="Infinity" GridPane.rowIndex="1"/><ComboBox fx:id="empleado" promptText="Seleccione" maxWidth="Infinity" GridPane.columnIndex="1" GridPane.rowIndex="1"/><ComboBox fx:id="servicio" promptText="Seleccione" maxWidth="Infinity" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+ <DatePicker fx:id="fecha" maxWidth="Infinity" GridPane.rowIndex="2"/><TextField fx:id="hora" promptText="HH:mm" GridPane.columnIndex="1" GridPane.rowIndex="2"/><Button text="Agendar cita" onAction="#agendar" styleClass="primario" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+ </GridPane>
+ <TableView fx:id="tabla" VBox.vgrow="ALWAYS"><placeholder><Label text="Agende la primera cita para comenzar."/></placeholder><columns><TableColumn fx:id="colCliente" text="Cliente" prefWidth="180"/><TableColumn fx:id="colEmpleado" text="Barbero" prefWidth="180"/><TableColumn fx:id="colServicio" text="Servicio" prefWidth="210"/><TableColumn fx:id="colFecha" text="Fecha y hora" prefWidth="185"/><TableColumn fx:id="colEstado" text="Estado" prefWidth="170"/></columns></TableView>
+ <HBox spacing="12"><Button text="Completar servicio" onAction="#completar"/><Button text="Registrar pago" onAction="#cobrar"/><Button text="Cancelar cita" onAction="#cancelar"/></HBox>
+ <Label fx:id="total" styleClass="marca"/><Label fx:id="mensaje" wrapText="true" minHeight="44" styleClass="mensaje"/>
+ <Label text="Datos de muestra. Las citas y los pagos se conservan durante esta ejecución; las cuentas sí se guardan en disco." styleClass="nota" wrapText="true"/>
+</VBox>

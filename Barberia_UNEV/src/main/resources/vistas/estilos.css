@@ -1,0 +1,12 @@
+.root { -fx-font-family: "SansSerif"; -fx-font-size: 14px; -fx-background-color: #f5f3ee; }
+.label { -fx-text-fill: #263a3b; }
+.titulo { -fx-font-size: 30px; -fx-font-weight: bold; }
+.marca { -fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: #24615d; }
+.text-field, .combo-box, .date-picker { -fx-pref-height: 40px; }
+.button { -fx-background-color: #e1e7e3; -fx-text-fill: #203b39; -fx-padding: 11 18; -fx-background-radius: 7; -fx-cursor: hand; }
+.button:hover { -fx-background-color: #cbd9d2; }
+.primario { -fx-background-color: #24615d; -fx-text-fill: white; -fx-font-weight: bold; }
+.primario:hover { -fx-background-color: #174b48; }
+.mensaje { -fx-text-fill: #854117; -fx-font-weight: bold; }
+.nota { -fx-font-size: 12px; -fx-text-fill: #627270; }
+.table-view { -fx-background-color: white; -fx-border-color: #d3dcd6; }

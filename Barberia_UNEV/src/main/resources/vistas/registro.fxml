@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.unev.barberia.controlador.RegistroController" spacing="14" prefWidth="660" prefHeight="640" styleClass="pagina">
+ <padding><Insets top="30" right="36" bottom="30" left="36"/></padding>
+ <Label text="BARBERÍA UNEV" styleClass="marca"/><Label text="Registro de personal" styleClass="titulo"/>
+ <Label text="Complete sus datos para crear una cuenta de acceso."/>
+ <GridPane hgap="18" vgap="10"><columnConstraints><ColumnConstraints percentWidth="50"/><ColumnConstraints percentWidth="50"/></columnConstraints>
+ <Label text="Nombre"/><Label text="Apellido" GridPane.columnIndex="1"/>
+ <TextField fx:id="nombre" GridPane.rowIndex="1"/><TextField fx:id="apellido" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+ <Label text="Usuario" GridPane.rowIndex="2"/><Label text="Correo electrónico" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+ <TextField fx:id="usuario" promptText="Ej.: jeremy" GridPane.rowIndex="3"/><TextField fx:id="correo" promptText="nombre@correo.com" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+ <Label text="Contraseña" GridPane.rowIndex="4"/><Label text="Confirmar contraseña" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+ <PasswordField fx:id="clave" promptText="Mínimo 8 caracteres" GridPane.rowIndex="5"/><PasswordField fx:id="confirmacion" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+ <Label text="Rol o tipo de usuario" GridPane.rowIndex="6"/><ComboBox fx:id="rol" promptText="Seleccione un rol" maxWidth="Infinity" GridPane.rowIndex="7" GridPane.columnSpan="2"/>
+ </GridPane>
+ <HBox spacing="12"><Button text="Guardar" onAction="#guardar" defaultButton="true" styleClass="primario"/><Button text="Limpiar" onAction="#limpiar"/><Button text="Cancelar" onAction="#cancelar" cancelButton="true"/></HBox>
+ <Label fx:id="mensaje" wrapText="true" minHeight="70" maxWidth="Infinity" styleClass="mensaje"/>
+ <Label text="Práctica académica: el rol describe la cuenta; los permisos se incorporarán en una fase posterior." wrapText="true" styleClass="nota"/>
+</VBox>
